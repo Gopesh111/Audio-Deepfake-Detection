@@ -1,0 +1,26 @@
+# --- Local Environments & Python Cache ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.env
+
+# --- Local Model Storage ---
+# We usually pull these from GCP Buckets during deployment
+models/*
+!models/.gitkeep
+
+# --- Large Datasets ---
+# Prevents raw unstructured data from bloating the image
+data/*.json
+data/*.csv
+data/*.log
+
+# --- Testing & IDE ---
+.pytest_cache/
+.vscode/
+.idea/
+.git/
+.dockerignore
+Dockerfile
